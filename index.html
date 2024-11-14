@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub README Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <i class="ri-github-fill"></i>
+        <span>README Generator</span>
+      </div>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-button">
+        <i class="ri-github-fill"></i>
+        Sign in with GitHub
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="editor">
+      <form id="readmeForm" class="form-container">
+        <!-- Basic Info Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-user-line"></i>
+            <h2>Basic Info</h2>
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="title">Title/Role</label>
+            <input type="text" id="title" name="title" placeholder="Full Stack Developer | Cloud Architect">
+          </div>
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="3" placeholder="A passionate developer who loves to code..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="github">GitHub Username</label>
+            <input type="text" id="github" name="github" placeholder="johndoe">
+          </div>
+        </section>
+
+        <!-- Work Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-briefcase-line"></i>
+            <h2>Work</h2>
+          </div>
+          <div class="form-group">
+            <label for="currentWork">Currently Working On</label>
+            <input type="text" id="currentWork" name="currentWork" placeholder="My Awesome Project">
+          </div>
+          <div class="form-group">
+            <label for="learning">Currently Learning</label>
+            <input type="text" id="learning" name="learning" placeholder="AWS, Docker, Kubernetes">
+          </div>
+          <div class="form-group">
+            <label for="collaboration">Looking to Collaborate On</label>
+            <input type="text" id="collaboration" name="collaboration" placeholder="Open Source Projects">
+          </div>
+        </section>
+
+        <!-- Social Links Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-links-line"></i>
+            <h2>Social Links</h2>
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Username</label>
+            <input type="text" id="linkedin" name="linkedin" placeholder="johndoe">
+          </div>
+          <div class="form-group">
+            <label for="twitter">Twitter Username</label>
+            <input type="text" id="twitter" name="twitter" placeholder="johndoe">
+          </div>
+          <div class="form-group">
+            <label for="facebook">Facebook Username</label>
+            <input type="text" id="facebook" name="facebook" placeholder="johndoe">
+          </div>
+          <div class="form-group">
+            <label for="instagram">Instagram Username</label>
+            <input type="text" id="instagram" name="instagram" placeholder="johndoe">
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-code-line"></i>
+            <h2>Skills</h2>
+          </div>
+          <div class="form-group">
+            <label for="languages">Programming Languages (comma-separated)</label>
+            <input type="text" id="languages" name="languages" placeholder="javascript, python, java">
+          </div>
+          <div class="form-group">
+            <label for="tools">Tools &amp; Technologies (comma-separated)</label>
+            <input type="text" id="tools" name="tools" placeholder="git, docker, aws">
+          </div>
+        </section>
+
+        <!-- GitHub Stats Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-bar-chart-line"></i>
+            <h2>GitHub Stats</h2>
+          </div>
+          <div class="form-group">
+            <label>Include Stats</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="stats" value="stats"> GitHub Stats
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stats" value="languages"> Most Used Languages
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stats" value="streak"> GitHub Streak
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="theme">Stats Theme</label>
+            <select id="theme" name="theme">
+              <option value="default">Default</option>
+              <option value="dark">Dark</option>
+              <option value="radical">Radical</option>
+              <option value="merko">Merko</option>
+              <option value="tokyonight">Tokyo Night</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Extra Section -->
+        <section class="form-section">
+          <div class="section-header">
+            <i class="ri-star-line"></i>
+            <h2>Extras</h2>
+          </div>
+          <div class="form-group">
+            <label for="funFact">Fun Fact</label>
+            <input type="text" id="funFact" name="funFact" placeholder="I love coding!">
+          </div>
+          <div class="form-group">
+            <label>Additional Sections</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="extras" value="visitors"> Profile Visitors Count
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="extras" value="spotify"> Spotify Now Playing
+              </label>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+
+    <div class="preview">
+      <div class="preview-header">
+        <h2>Preview</h2>
+        <button id="downloadBtn" class="download-button">
+          <i class="ri-download-line"></i>
+          Download README
+        </button>
+      </div>
+      <div id="previewContent" class="preview-content markdown-body"></div>
+    </div>
+  </main>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="script.js"></script>
+</body>
+</html>
