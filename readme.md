@@ -78,27 +78,6 @@
     <li>Click the "Download README" button to save your file.</li>
 </ol>
 
-<h3>Example Markdown Output:</h3>
-<pre><code>
-# Hi, I'm John Doe
-A passionate developer and open-source enthusiast.
-
-## Connect with me:
-![LinkedIn](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg)
-![GitHub](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg)
-
-## Skills:
-![JavaScript](https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg)
-![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)
-
-## Projects:
-### My Awesome Project
-A brief description of the project.
-[View Project](https://github.com/username/project)
-</code></pre>
-
-<hr>
-
 <h2 id="license">📜 License</h2>
 <p>This project is licensed under the <strong>MIT License</strong>. See the LICENSE file for details.</p>
 
