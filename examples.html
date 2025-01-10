@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="nav-content">
@@ -87,7 +88,7 @@
               </p>
 
               <h3 align="left">Languages and Tools:</h3>
-              
+
               <h4 align="left">Programming Languages</h4>
               <p align="left">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
@@ -133,7 +134,7 @@
           <div class="example-preview">
             <div class="markdown-preview">
               <h1 align="center">Hi 👋, I'm Jane Smith</h1>
-              <h3 align="center">UI/UX Designer & Creative Developer</h3>
+              <h3 align="center">UI/UX Designer &amp; Creative Developer</h3>
               <p align="center">Creating beautiful, intuitive interfaces that users love</p>
 
               <p align="left"><img src="https://komarev.com/ghpvc/?username=janesmith&label=Profile%20views&color=0e75b6&style=flat" alt="janesmith" /></p>
@@ -153,7 +154,7 @@
               </p>
 
               <h3 align="left">Languages and Tools:</h3>
-              
+
               <h4 align="left">Design</h4>
               <p align="left">
                 <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
@@ -210,7 +211,7 @@
               </p>
 
               <h3 align="left">Languages and Tools:</h3>
-              
+
               <h4 align="left">Programming Languages</h4>
               <p align="left">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
@@ -226,7 +227,7 @@
               </p>
 
               <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=alexjohnson&show_icons=true&locale=en&theme=tokyonight" alt="alexjohnson" /></p>
-              
+
               <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=alexjohnson&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="alexjohnson" /></p>
             </div>
           </div>
@@ -270,14 +271,14 @@
               </p>
 
               <h3 align="left">Languages and Tools:</h3>
-              
+
               <h4 align="left">Programming Languages</h4>
               <p align="left">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/r/r-original.svg" alt="r" width="40" height="40"/>
               </p>
 
-              <h4 align="left">Data Science & ML</h4>
+              <h4 align="left">Data Science &amp; ML</h4>
               <p align="left">
                 <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/>
                 <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/>
@@ -292,7 +293,7 @@
               </p>
 
               <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=emilychen&show_icons=true&locale=en&theme=merko" alt="emilychen" /></p>
-              
+
               <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=emilychen&show_icons=true&locale=en&layout=compact&theme=merko" alt="emilychen" /></p>
             </div>
           </div>
@@ -306,7 +307,19 @@
     </div>
   </main>
 
+
   <footer class="footer">
+    <div class="footer-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="footer-waves">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </div>
     <div class="footer-content">
       <div class="footer-logo">
         <i class="ri-github-fill"></i>
@@ -317,6 +330,9 @@
         <a href="features.html">Features</a>
         <a href="examples.html">Examples</a>
         <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-attribution">
+        <p>Made with <span class="heart">❤️</span> by <a href="https://github.com/FarhanAlam-Official" target="_blank" rel="noopener noreferrer">Farhan Alam</a></p>
       </div>
       <div class="footer-copyright">
         <p>&copy; 2023 GitHub Profile README Generator. All rights reserved.</p>
@@ -329,14 +345,14 @@
       const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
       const navLinks = document.querySelector('.nav-links');
       const navLinksItems = document.querySelectorAll('.nav-link');
-      
+
       // Mobile menu toggle
       mobileMenuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        mobileMenuToggle.innerHTML = navLinks.classList.contains('active') ? 
+        mobileMenuToggle.innerHTML = navLinks.classList.contains('active') ?
           '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>';
       });
-      
+
       // Close mobile menu when clicking on a link
       navLinksItems.forEach(link => {
         link.addEventListener('click', () => {
@@ -348,13 +364,13 @@
       // Tab functionality
       const tabButtons = document.querySelectorAll('.tab-button');
       const exampleContents = document.querySelectorAll('.example-content');
-      
+
       tabButtons.forEach(button => {
         button.addEventListener('click', () => {
           // Remove active class from all buttons and contents
           tabButtons.forEach(btn => btn.classList.remove('active'));
           exampleContents.forEach(content => content.classList.remove('active'));
-          
+
           // Add active class to clicked button and corresponding content
           button.classList.add('active');
           const tabId = button.getAttribute('data-tab');
@@ -364,12 +380,12 @@
 
       // Copy template functionality
       const copyButtons = document.querySelectorAll('.copy-button');
-      
+
       copyButtons.forEach(button => {
         button.addEventListener('click', () => {
           const exampleType = button.getAttribute('data-example');
           const markdownContent = document.querySelector(`#${exampleType}-example .markdown-preview`).innerText;
-          
+
           navigator.clipboard.writeText(markdownContent)
             .then(() => {
               // Show success message
@@ -386,7 +402,7 @@
 
       // Use template functionality
       const useButtons = document.querySelectorAll('.use-button');
-      
+
       useButtons.forEach(button => {
         button.addEventListener('click', () => {
           // Redirect to home page with template parameter
