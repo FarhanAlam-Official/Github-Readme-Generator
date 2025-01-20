@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - GitHub Profile README Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <i class="ri-github-fill"></i>
+        <span>GitHub Profile README Generator</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">
+          <i class="ri-home-line"></i> Home
+        </a>
+        <a href="features.html" class="nav-link active">
+          <i class="ri-star-line"></i> Features
+        </a>
+        <a href="examples.html" class="nav-link">
+          <i class="ri-file-list-line"></i> Examples
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-button">
+          <i class="ri-github-fill"></i>
+          Sign in with GitHub
+        </a>
+      </div>
+      <button class="mobile-menu-toggle">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <div class="page-header">
+      <h1>Features</h1>
+      <p>Discover all the powerful features of our GitHub Profile README Generator</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-magic-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Step-by-Step Wizard</h3>
+          <p>Our intuitive wizard guides you through the entire process of creating your GitHub profile README, making it easy to generate a professional profile in minutes.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-eye-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Live Preview</h3>
+          <p>See your GitHub profile README in real-time as you make changes, allowing you to perfect your profile before downloading.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-bar-chart-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>GitHub Stats Integration</h3>
+          <p>Showcase your GitHub statistics, most used languages, streak stats, and trophies with customizable themes and options.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-code-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Categorized Skills</h3>
+          <p>Organize your skills into logical categories like Programming Languages, Frontend, Backend, Database, DevOps, and Mobile Development.</p>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-links-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Social Media Integration</h3>
+          <p>Connect with your audience by adding links to your social media profiles with professional icons.</p>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-user-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Visitor Counter</h3>
+          <p>Track the number of visitors to your GitHub profile with an integrated visitor counter.</p>
+        </div>
+      </div>
+
+      <!-- Feature 7 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-spotify-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Spotify Integration</h3>
+          <p>Show what you're currently listening to on Spotify directly on your GitHub profile.</p>
+        </div>
+      </div>
+
+      <!-- Feature 8 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-heart-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Support Links</h3>
+          <p>Add support links like Buy Me A Coffee, Ko-fi, and PayPal to your profile to allow your audience to support your work.</p>
+        </div>
+      </div>
+
+      <!-- Feature 9 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="ri-download-line"></i>
+        </div>
+        <div class="feature-content">
+          <h3>One-Click Download</h3>
+          <p>Download your README.md file with a single click, ready to be added to your GitHub profile repository.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Ready to create your GitHub Profile README?</h2>
+      <a href="index.html" class="cta-button">Get Started Now</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="ri-github-fill"></i>
+        <span>GitHub Profile README Generator</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="examples.html">Examples</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2023 GitHub Profile README Generator. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const navLinksItems = document.querySelectorAll('.nav-link');
+      
+      // Mobile menu toggle
+      mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuToggle.innerHTML = navLinks.classList.contains('active') ? 
+          '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>';
+      });
+      
+      // Close mobile menu when clicking on a link
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          mobileMenuToggle.innerHTML = '<i class="ri-menu-line"></i>';
+        });
+      });
+
+      // Animate feature cards on scroll
+      const featureCards = document.querySelectorAll('.feature-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      featureCards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
