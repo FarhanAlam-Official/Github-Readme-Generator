@@ -55,6 +55,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-theme');
+    }
+
+    // Toggle theme when clicking the theme toggle
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+
+        // Save theme preference
+        if (body.classList.contains('dark-theme')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+
+        // Add animation effect
+        const toggleThumb = themeToggle.querySelector('.toggle-thumb');
+        toggleThumb.classList.add('animate__animated', 'animate__bounceIn');
+        setTimeout(() => {
+          toggleThumb.classList.remove('animate__animated', 'animate__bounceIn');
+        }, 500);
+      });
+    }
+
     // Start button click handler
     startBtn.addEventListener('click', () => {
       window.scrollTo(0, 0);
