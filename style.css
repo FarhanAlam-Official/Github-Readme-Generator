@@ -15,6 +15,7 @@
   }
 
   /* Dark Theme Variables */
+  html.dark-theme,
   body.dark-theme {
     --bg-dark: #0d1117;
     --bg-darker: #010409;
@@ -24,6 +25,7 @@
   }
 
   /* Light Theme Variables */
+  html:not(.dark-theme),
   body:not(.dark-theme) {
     --bg-dark: #ffffff;
     --bg-darker: #f6f8fa;

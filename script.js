@@ -1,8 +1,4 @@
-// Theme toggle functionality - This runs immediately to prevent flash of wrong theme
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-theme');
-}
+// Theme functionality moved to theme.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // Common elements across all pages
@@ -10,9 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navLinksItems = document.querySelectorAll('.nav-link');
 
-    // Theme toggle elements
-    const themeToggle = document.querySelector('.theme-toggle');
-    const body = document.body;
+    // Theme toggle functionality moved to theme.js
 
     // Index page specific elements
     const form = document.getElementById('readmeForm');
@@ -67,28 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Theme toggle functionality is already initialized at the top of the file
-
-    // Toggle theme when clicking the theme toggle
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-
-        // Save theme preference
-        if (body.classList.contains('dark-theme')) {
-          localStorage.setItem('theme', 'dark');
-        } else {
-          localStorage.setItem('theme', 'light');
-        }
-
-        // Add animation effect
-        const toggleThumb = themeToggle.querySelector('.toggle-thumb');
-        toggleThumb.classList.add('animate__animated', 'animate__bounceIn');
-        setTimeout(() => {
-          toggleThumb.classList.remove('animate__animated', 'animate__bounceIn');
-        }, 500);
-      });
-    }
+    // Theme toggle functionality moved to theme.js
 
     // Start button click handler
     startBtn.addEventListener('click', () => {
