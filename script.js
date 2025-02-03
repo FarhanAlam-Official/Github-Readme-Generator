@@ -1,5 +1,20 @@
+// Theme toggle functionality - This runs immediately to prevent flash of wrong theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Get DOM elements
+    // Common elements across all pages
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-link');
+
+    // Theme toggle elements
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    // Index page specific elements
     const form = document.getElementById('readmeForm');
     const previewContent = document.getElementById('previewContent');
     const downloadBtn = document.getElementById('downloadBtn');
@@ -12,9 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.close-modal');
     const copyMarkdownBtn = document.getElementById('copyMarkdownBtn');
     const downloadReadmeBtn = document.getElementById('downloadReadmeBtn');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksItems = document.querySelectorAll('.nav-link');
 
     // Wizard steps management
     let currentStep = 1;
@@ -55,15 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Theme toggle functionality
-    const themeToggle = document.querySelector('.theme-toggle');
-    const body = document.body;
-
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-theme');
-    }
+    // Theme toggle functionality is already initialized at the top of the file
 
     // Toggle theme when clicking the theme toggle
     if (themeToggle) {
