@@ -310,6 +310,7 @@
     box-shadow: 0 0 10px var(--primary-color);
   }
 
+  html.dark-theme .toggle-thumb,
   body.dark-theme .toggle-thumb {
     left: calc(100% - 18px);
     background: var(--secondary-color);
