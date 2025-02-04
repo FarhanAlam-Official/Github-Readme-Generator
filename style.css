@@ -15,8 +15,7 @@
   }
 
   /* Dark Theme Variables */
-  html.dark-theme,
-  body.dark-theme {
+  html.dark-theme {
     --bg-dark: #0d1117;
     --bg-darker: #010409;
     --text-white: #c9d1d9;
@@ -25,8 +24,7 @@
   }
 
   /* Light Theme Variables */
-  html:not(.dark-theme),
-  body:not(.dark-theme) {
+  html:not(.dark-theme) {
     --bg-dark: #ffffff;
     --bg-darker: #f6f8fa;
     --text-white: #24292e;
@@ -35,11 +33,11 @@
   }
 
   /* Navbar Light Theme Overrides */
-  body:not(.dark-theme) .navbar {
+  html:not(.dark-theme) .navbar {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
-  body:not(.dark-theme) .nav-background {
+  html:not(.dark-theme) .nav-background {
     background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.95));
     border-bottom: 1px solid rgba(225, 228, 232, 0.8);
   }
@@ -310,8 +308,7 @@
     box-shadow: 0 0 10px var(--primary-color);
   }
 
-  html.dark-theme .toggle-thumb,
-  body.dark-theme .toggle-thumb {
+  html.dark-theme .toggle-thumb {
     left: calc(100% - 18px);
     background: var(--secondary-color);
   }
