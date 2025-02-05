@@ -344,8 +344,12 @@
     overflow: hidden;
   }
 
-  body:not(.dark-theme) .hero-section {
+  html:not(.dark-theme) .hero-section {
     background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
+  }
+
+  html.dark-theme .hero-section {
+    background: linear-gradient(135deg, #0d1117 0%, #010409 100%);
   }
 
   /* Hero Particles */
@@ -359,13 +363,22 @@
     z-index: 0;
   }
 
-  body:not(.dark-theme) .hero-particles span {
+  html:not(.dark-theme) .hero-particles span {
     opacity: 0.4;
     filter: blur(1px);
   }
 
-  body:not(.dark-theme) .hero-particles span:nth-child(even) {
+  html:not(.dark-theme) .hero-particles span:nth-child(even) {
     opacity: 0.3;
+  }
+
+  html.dark-theme .hero-particles span {
+    opacity: 0.6;
+    filter: blur(0.5px);
+  }
+
+  html.dark-theme .hero-particles span:nth-child(even) {
+    opacity: 0.7;
   }
 
   .hero-particles span {
