@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile README Generator - Create Your Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="theme.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-background"></div>
+    <div class="nav-content">
+      <div class="nav-logo">
+        <i class="ri-github-fill"></i>
+        <span>GitHub Profile README Generator</span>
+        <div class="logo-badge">v2.0</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">
+          <i class="ri-home-line"></i> Home
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="features.html" class="nav-link">
+          <i class="ri-star-line"></i> Features
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="examples.html" class="nav-link">
+          <i class="ri-file-list-line"></i> Examples
+          <span class="nav-indicator"></span>
+        </a>
+        <div class="theme-toggle">
+          <i class="ri-sun-line"></i>
+          <div class="toggle-track">
+            <div class="toggle-thumb"></div>
+          </div>
+          <i class="ri-moon-line"></i>
+        </div>
+      </div>
+      <button class="mobile-menu-toggle">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container generator-page">
+    <div class="wizard-container">
+      <div class="wizard-steps">
+        <div class="step active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-title">Basic Info</div>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-title">Work &amp; Social</div>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-title">Skills</div>
+        </div>
+        <div class="step" data-step="4">
+          <div class="step-number">4</div>
+          <div class="step-title">GitHub Stats</div>
+        </div>
+        <div class="step" data-step="5">
+          <div class="step-number">5</div>
+          <div class="step-title">Extras</div>
+        </div>
+        <div class="step" data-step="6">
+          <div class="step-number">6</div>
+          <div class="step-title">Preview</div>
+        </div>
+      </div>
+
+      <div class="wizard-progress">
+        <div class="progress-bar">
+          <div class="progress" style="width: 16.66%"></div>
+        </div>
+      </div>
+
+      <div class="editor">
+        <form id="readmeForm" class="form-container">
+          <!-- Step 1: Basic Info Section -->
+          <section class="form-section" data-step-content="1">
+            <div class="section-header">
+              <i class="ri-user-line"></i>
+              <h2>Basic Info of User</h2>
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="title">Title/Role</label>
+              <input type="text" id="title" name="title" placeholder="Full Stack Developer | Cloud Architect">
+            </div>
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <textarea id="bio" name="bio" rows="3" placeholder="A passionate developer who loves to code..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="github">GitHub Username</label>
+              <input type="text" id="github" name="github" placeholder="johndoe">
+            </div>
+          </section>
+
+          <!-- Step 2: Work & Social Section -->
+          <section class="form-section" data-step-content="2" style="display: none;">
+            <div class="section-header">
+              <i class="ri-briefcase-line"></i>
+              <h2>Work</h2>
+            </div>
+            <div class="form-group">
+              <label for="currentWork">Currently Working On</label>
+              <input type="text" id="currentWork" name="currentWork" placeholder="My Awesome Project">
+            </div>
+            <div class="form-group">
+              <label for="learning">Currently Learning</label>
+              <input type="text" id="learning" name="learning" placeholder="AWS, Docker, Kubernetes">
+            </div>
+            <div class="form-group">
+              <label for="collaboration">Looking to Collaborate On</label>
+              <input type="text" id="collaboration" name="collaboration" placeholder="Open Source Projects">
+            </div>
+
+            <!-- Social Links Section -->
+            <div class="section-header social-header">
+              <i class="ri-links-line"></i>
+              <h2>Social Links</h2>
+            </div>
+            <div class="form-group">
+              <label for="linkedin">LinkedIn Username</label>
+              <input type="text" id="linkedin" name="linkedin" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="twitter">Twitter Username</label>
+              <input type="text" id="twitter" name="twitter" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="facebook">Facebook Username</label>
+              <input type="text" id="facebook" name="facebook" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="instagram">Instagram Username</label>
+              <input type="text" id="instagram" name="instagram" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="dev">Dev.to Username</label>
+              <input type="text" id="dev" name="dev" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="medium">Medium Username</label>
+              <input type="text" id="medium" name="medium" placeholder="johndoe">
+            </div>
+            <div class="form-group">
+              <label for="stackoverflow">Stack Overflow ID</label>
+              <input type="text" id="stackoverflow" name="stackoverflow" placeholder="12345678">
+            </div>
+            <div class="form-group">
+              <label for="codepen">CodePen Username</label>
+              <input type="text" id="codepen" name="codepen" placeholder="johndoe">
+            </div>
+          </section>
+
+          <!-- Step 3: Skills Section -->
+          <section class="form-section" data-step-content="3" style="display: none;">
+            <div class="section-header">
+              <i class="ri-code-line"></i>
+              <h2>Skills</h2>
+            </div>
+            <div class="form-group">
+              <label for="languages">Programming Languages</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="javascript"><span>JavaScript</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="typescript"><span>TypeScript</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="python"> Python</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="java"> Java</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="c"> C</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="cpp"> C++</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="csharp"> C#</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="php"> PHP</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="ruby"> Ruby</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="swift"> Swift</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="go"> Go</label>
+                <label class="checkbox-label"><input type="checkbox" name="languages" value="rust"> Rust</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="frontend">Frontend Development</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="html5"> HTML5</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="css3"> CSS3</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="react"> React</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="angular"> Angular</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="vue"> Vue</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="bootstrap"> Bootstrap</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="tailwind"> Tailwind</label>
+                <label class="checkbox-label"><input type="checkbox" name="frontend" value="sass"> Sass</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="backend">Backend Development</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="nodejs"> Node.js</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="express"> Express</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="django"> Django</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="spring"> Spring</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="flask"> Flask</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="laravel"> Laravel</label>
+                <label class="checkbox-label"><input type="checkbox" name="backend" value="graphql"> GraphQL</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="database">Database</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="database" value="mongodb"> MongoDB</label>
+                <label class="checkbox-label"><input type="checkbox" name="database" value="mysql"> MySQL</label>
+                <label class="checkbox-label"><input type="checkbox" name="database" value="postgresql"> PostgreSQL</label>
+                <label class="checkbox-label"><input type="checkbox" name="database" value="redis"> Redis</label>
+                <label class="checkbox-label"><input type="checkbox" name="database" value="sqlite"> SQLite</label>
+                <label class="checkbox-label"><input type="checkbox" name="database" value="oracle"> Oracle</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="devops">DevOps</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="aws"> AWS</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="docker"> Docker</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="kubernetes"> Kubernetes</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="gcp"> GCP</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="azure"> Azure</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="jenkins"> Jenkins</label>
+                <label class="checkbox-label"><input type="checkbox" name="devops" value="git"> Git</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile App Development</label>
+              <div class="checkbox-group skills-group">
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="android"> Android</label>
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="ios"> iOS</label>
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="flutter"> Flutter</label>
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="reactnative"> React Native</label>
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="kotlin"> Kotlin</label>
+                <label class="checkbox-label"><input type="checkbox" name="mobile" value="swift"> Swift</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="other">Other Tools &amp; Technologies</label>
+              <input type="text" id="other" name="other" placeholder="Other tools (comma-separated)">
+            </div>
+          </section>
+
+          <!-- Step 4: GitHub Stats Section -->
+          <section class="form-section" data-step-content="4" style="display: none;">
+            <div class="section-header">
+              <i class="ri-bar-chart-line"></i>
+              <h2>GitHub Stats</h2>
+            </div>
+            <div class="form-group">
+              <label>Include Stats</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats" value="stats" checked> GitHub Stats
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats" value="languages" checked> Most Used Languages
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats" value="streak" checked> GitHub Streak
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats" value="trophies"> GitHub Trophies
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="theme">Stats Theme</label>
+              <select id="theme" name="theme">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="radical">Radical</option>
+                <option value="merko">Merko</option>
+                <option value="gruvbox">Gruvbox</option>
+                <option value="tokyonight">Tokyo Night</option>
+                <option value="onedark">One Dark</option>
+                <option value="cobalt">Cobalt</option>
+                <option value="synthwave">Synthwave</option>
+                <option value="highcontrast">High Contrast</option>
+                <option value="dracula">Dracula</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="stats-options">Stats Options</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats-options" value="show_icons" checked> Show Icons
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats-options" value="count_private" checked> Count Private Contributions
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats-options" value="include_all_commits"> Include All Commits
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="stats-options" value="show_owner"> Show Owner
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 5: Extra Section -->
+          <section class="form-section" data-step-content="5" style="display: none;">
+            <div class="section-header">
+              <i class="ri-star-line"></i>
+              <h2>Extras</h2>
+            </div>
+            <div class="form-group">
+              <label for="funFact">Fun Fact</label>
+              <input type="text" id="funFact" name="funFact" placeholder="I love coding!">
+            </div>
+            <div class="form-group">
+              <label>Additional Sections</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="extras" value="visitors" checked> Profile Visitors Count
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="extras" value="spotify"> Spotify Now Playing
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="extras" value="activity_graph"> GitHub Activity Graph
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="extras" value="blog_posts"> Latest Blog Posts
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Support Links</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="support" value="buymeacoffee"> Buy Me A Coffee
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="support" value="kofi"> Ko-fi
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="support" value="paypal"> PayPal
+                </label>
+              </div>
+            </div>
+            <div class="form-group support-links" style="display: none;">
+              <label for="buymeacoffee-username">Buy Me A Coffee Username</label>
+              <input type="text" id="buymeacoffee-username" name="buymeacoffee-username" placeholder="johndoe">
+
+              <label for="kofi-username">Ko-fi Username</label>
+              <input type="text" id="kofi-username" name="kofi-username" placeholder="johndoe">
+
+              <label for="paypal-username">PayPal Username</label>
+              <input type="text" id="paypal-username" name="paypal-username" placeholder="johndoe">
+            </div>
+          </section>
+        </form>
+
+        <div class="wizard-navigation">
+          <button id="prevBtn" class="nav-button" disabled>
+            <i class="ri-arrow-left-line"></i> Previous
+          </button>
+          <button id="nextBtn" class="nav-button">
+            Next <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 6: Preview Section -->
+      <div class="preview" data-step-content="6" style="display: none;">
+        <div class="preview-header">
+          <h2>Preview Your GitHub Profile README</h2>
+          <div class="preview-actions">
+            <button id="copyBtn" class="action-button">
+              <i class="ri-file-copy-line"></i> Copy Markdown
+            </button>
+            <button id="downloadBtn" class="action-button download-button">
+              <i class="ri-download-line"></i> Download README
+            </button>
+          </div>
+        </div>
+        <div id="previewContent" class="preview-content markdown-body"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Final Success Modal -->
+  <div id="successModal" class="modal" style="display: none;">
+    <div class="modal-content animate__animated animate__zoomIn">
+      <div class="modal-header">
+        <h2><i class="ri-check-line"></i> README Generated Successfully!</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Your GitHub Profile README has been generated successfully. What would you like to do next?</p>
+        <div class="modal-actions">
+          <button id="copyMarkdownBtn" class="modal-button">
+            <i class="ri-file-copy-line"></i> Copy Markdown
+          </button>
+          <button id="downloadReadmeBtn" class="modal-button primary">
+            <i class="ri-download-line"></i> Download README
+          </button>
+        </div>
+        <div class="modal-tip">
+          <p><i class="ri-information-line"></i> <strong>Tip:</strong> Create a repository with the same name as your GitHub username to display this README on your profile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="footer-waves">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="ri-github-fill"></i>
+        <span>GitHub Profile README Generator</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="examples.html">Examples</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-attribution">
+        <p>Made with <span class="heart">❤️</span> by <a href="https://github.com/FarhanAlam-Official" target="_blank" rel="noopener noreferrer">Farhan Alam</a></p>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2023 GitHub Profile README Generator. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="generator.js"></script>
+</body>
+</html>
