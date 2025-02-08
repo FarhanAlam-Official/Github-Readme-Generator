@@ -617,7 +617,8 @@
     font-weight: 700;
   }
 
-  .hero-content h1 .highlight {
+  .hero-content h1 .highlight,
+  .hero-content h1 .typing-container {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
@@ -626,16 +627,79 @@
     display: inline-block;
   }
 
-  .hero-content h1 .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 6px;
+  /* Underline effect removed */
+
+  /* Typing Animation */
+  .typing-container {
+    position: relative;
+    display: inline-block;
+    width: 350px; /* Fixed width */
+    margin-right: 0;
+    padding-bottom: 4px; /* Increased bottom padding */
+    padding-top: 2px; /* Added top padding */
+    line-height: 1.4; /* Match the updated typing element */
+    height: 1.4em; /* Fixed height to match typing element */
+    vertical-align: baseline; /* Consistent vertical alignment */
+  }
+
+  .typing {
+    display: inline-block;
+    position: relative;
+    padding-right: 5px;
+    padding-bottom: 4px; /* Increased bottom padding */
+    padding-top: 2px; /* Added top padding */
+    letter-spacing: 1px;
+    color: inherit; /* Inherit color from parent */
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    opacity: 0.3;
-    border-radius: 3px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    min-height: 1.4em; /* Further increased height */
+    line-height: 1.4; /* Further increased line height */
+    vertical-align: baseline; /* Align with baseline */
+    height: 1.4em; /* Fixed height to prevent shifting */
+    overflow: visible; /* Allow text to overflow if needed */
+  }
+
+  .typing-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 2;
+  }
+
+  .typing-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: pre;
+  }
+
+  .typing::after {
+    content: '|';
+    position: absolute;
+    right: -5px;
+    top: 0;
+    bottom: 4px; /* Match the increased bottom padding */
+    height: calc(100% - 6px); /* Adjust for top and bottom padding */
+    color: var(--primary-color);
+    animation: cursor-blink 0.75s step-end infinite;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    vertical-align: baseline;
+    transform: translateY(0); /* Prevent any transform shifts */
+  }
+
+  @keyframes cursor-blink {
+    from, to { opacity: 0 }
+    50% { opacity: 1 }
   }
 
   .hero-content p {
