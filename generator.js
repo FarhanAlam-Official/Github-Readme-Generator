@@ -118,17 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let markdown = `<h1 align="center">Hi 👋, I'm ${name || '[Your Name]'}</h1>
 
-  ${title ? `<h3 align="center">${title}</h3>\n\n` : ''}
-  ${bio ? `<p align="center">${bio}</p>\n\n` : ''}
+  ${title ? `<h3 align="center">${title}</h3>\n\n\n` : ''}
+  ${bio ? `<p align="center">${bio}</p>\n\n\n` : ''}
 
-  ${extras.includes('visitors') ? `<p align="left"><img src="https://komarev.com/ghpvc/?username=${githubUsername}&label=Profile%20views&color=0e75b6&style=flat" alt="${githubUsername}" /></p>\n\n` : ''}
+  ${extras.includes('visitors') ? `<p align="left"><img src="https://komarev.com/ghpvc/?username=${githubUsername}&label=Profile%20views&color=0e75b6&style=flat" alt="${githubUsername}" /></p>\n\n\n` : ''}
 
   ${currentWork ? `- 🔭 I'm currently working on **${currentWork}**\n\n` : ''}
   ${learning ? `- 🌱 I'm currently learning **${learning}**\n\n` : ''}
   ${collaboration ? `- 👯 I'm looking to collaborate on **${collaboration}**\n\n` : ''}
   ${funFact ? `- ⚡ Fun fact: **${funFact}**\n\n` : ''}
 
-  <h3 align="left">Connect with me:</h3>
+  <h3 align="left">Connect with me:</h3>\n
 
   <p align="left">
   ${linkedin ? `<a href="https://linkedin.com/in/${linkedin}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="${linkedin}" height="30" width="40" /></a>` : ''}
@@ -139,47 +139,47 @@ document.addEventListener('DOMContentLoaded', () => {
   ${medium ? `<a href="https://medium.com/@${medium}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="${medium}" height="30" width="40" /></a>` : ''}
   ${stackoverflow ? `<a href="https://stackoverflow.com/users/${stackoverflow}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="${stackoverflow}" height="30" width="40" /></a>` : ''}
   ${codepen ? `<a href="https://codepen.io/${codepen}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="${codepen}" height="30" width="40" /></a>` : ''}
-  </p>\n\n`;
+  </p>\n\n\n`;
 
       // Add Skills Section with Categories
       if (programmingLanguages.length > 0 || frontendSkills.length > 0 || backendSkills.length > 0 ||
           databaseSkills.length > 0 || devopsSkills.length > 0 || mobileSkills.length > 0 || otherSkills.length > 0) {
 
-        markdown += `<h3 align="left">Languages and Tools:</h3>\n\n`;
+        markdown += `<h3 align="left">Languages and Tools:</h3>\n\n\n`;
 
         // Programming Languages
         if (programmingLanguages.length > 0) {
-          markdown += `<h4 align="left">Programming Languages</h4>\n\n<p align="left">\n${generateTechStackIcons(programmingLanguages)}\n</p>\n\n`;
+          markdown += `<h4 align="left">Programming Languages</h4>\n\n<p align="left">\n${generateTechStackIcons(programmingLanguages)}\n</p>\n\n\n`;
         }
 
         // Frontend Development
         if (frontendSkills.length > 0) {
-          markdown += `<h4 align="left">Frontend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(frontendSkills)}\n</p>\n\n`;
+          markdown += `<h4 align="left">Frontend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(frontendSkills)}\n</p>\n\n\n`;
         }
 
         // Backend Development
         if (backendSkills.length > 0) {
-          markdown += `<h4 align="left">Backend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(backendSkills)}\n</p>\n\n`;
+          markdown += `<h4 align="left">Backend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(backendSkills)}\n</p>\n\n\n`;
         }
 
         // Database
         if (databaseSkills.length > 0) {
-          markdown += `<h4 align="left">Database</h4>\n\n<p align="left">\n${generateTechStackIcons(databaseSkills)}\n</p>\n\n`;
+          markdown += `<h4 align="left">Database</h4>\n\n<p align="left">\n${generateTechStackIcons(databaseSkills)}\n</p>\n\n\n`;
         }
 
         // DevOps
         if (devopsSkills.length > 0) {
-          markdown += `<h4 align="left">DevOps</h4>\n\n<p align="left">\n${generateTechStackIcons(devopsSkills)}\n</p>\n\n`;
+          markdown += `<h4 align="left">DevOps</h4>\n\n<p align="left">\n${generateTechStackIcons(devopsSkills)}\n</p>\n\n\n`;
         }
 
         // Mobile App Development
         if (mobileSkills.length > 0) {
-          markdown += `<h4 align="left">Mobile App Development</h4>\n\n<p align="left">\n${generateTechStackIcons(mobileSkills)}\n</p>\n\n`;
+          markdown += `<h4 align="left">Mobile App Development</h4>\n\n<p align="left">\n${generateTechStackIcons(mobileSkills)}\n</p>\n\n\n`;
         }
 
         // Other Skills
         if (otherSkills.length > 0) {
-          markdown += `<h4 align="left">Other</h4>\n\n<p align="left">\n${generateTechStackIcons(otherSkills.map(skill => skill.toLowerCase()))}\n</p>\n\n`;
+          markdown += `<h4 align="left">Other</h4>\n\n<p align="left">\n${generateTechStackIcons(otherSkills.map(skill => skill.toLowerCase()))}\n</p>\n\n\n`;
         }
       }
 
@@ -189,47 +189,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add GitHub Stats Section Header
       if (selectedStats.length > 0) {
-        markdown += `\n<h3 align="left">GitHub Stats:</h3>\n\n`;
+        markdown += `\n<h3 align="left">GitHub Stats:</h3>\n\n\n`;
       }
 
       // Add GitHub Stats
       if (selectedStats.includes('stats')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&locale=en&theme=${theme}${statsOptionsStr}" alt="${githubUsername}" />\n</p>\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&locale=en&theme=${theme}${statsOptionsStr}" alt="${githubUsername}" />\n</p>\n\n\n`;
       }
 
       // Add Most Used Languages
       if (selectedStats.includes('languages')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=${githubUsername}&show_icons=true&locale=en&layout=compact&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=${githubUsername}&show_icons=true&locale=en&layout=compact&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n`;
       }
 
       // Add GitHub Streak Stats
       if (selectedStats.includes('streak')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n`;
       }
 
       // Add GitHub Trophies
       if (selectedStats.includes('trophies')) {
-        markdown += `<p align="left">\n<a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" /></a>\n</p>\n\n`;
+        markdown += `<p align="left">\n<a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" /></a>\n</p>\n\n\n`;
       }
 
       // Add Spotify Now Playing
       if (extras.includes('spotify')) {
-        markdown += `\n<h3 align="left">Currently Playing:</h3>\n\n<p align="center">\n<img src="https://spotify-github-profile.vercel.app/api/view?uid=${githubUsername}&cover_image=true&theme=default" alt="spotify"/>\n</p>\n\n`;
+        markdown += `\n<h3 align="left">Currently Playing:</h3>\n\n\n<p align="center">\n<img src="https://spotify-github-profile.vercel.app/api/view?uid=${githubUsername}&cover_image=true&theme=default" alt="spotify"/>\n</p>\n\n\n`;
       }
 
       // Add GitHub Activity Graph
       if (extras.includes('activity_graph')) {
-        markdown += `\n<h3 align="left">Activity Graph:</h3>\n\n<p>\n<img align="center" src="https://activity-graph.herokuapp.com/graph?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n`;
+        markdown += `\n<h3 align="left">Activity Graph:</h3>\n\n\n<p>\n<img align="center" src="https://activity-graph.herokuapp.com/graph?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n`;
       }
 
       // Add Latest Blog Posts
       if (extras.includes('blog_posts')) {
-        markdown += `\n<h3 align="left">Latest Blog Posts:</h3>\n\n<!-- BLOG-POST-LIST:START -->\n<!-- BLOG-POST-LIST:END -->\n\n`;
+        markdown += `\n<h3 align="left">Latest Blog Posts:</h3>\n\n\n<!-- BLOG-POST-LIST:START -->\n<!-- BLOG-POST-LIST:END -->\n\n\n`;
       }
 
       // Add Support Links
       if (supportOptions.length > 0) {
-        markdown += `\n<h3 align="left">Support:</h3>\n\n`;
+        markdown += `\n<h3 align="left">Support:</h3>\n\n\n`;
 
         if (supportOptions.includes('buymeacoffee')) {
           markdown += `<p>\n<a href="https://www.buymeacoffee.com/${buymeacoffeeUsername || githubUsername}">\n<img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymeacoffeeUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n`;

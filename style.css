@@ -8,7 +8,7 @@
     --text-white: #c9d1d9;
     --border-color: #30363d;
     --input-bg: #161b22;
-    --success-color: #2ea043;
+    --success-color: #2ecc71; /* More vibrant green */
     --warning-color: #d29922;
     --error-color: #f85149;
     --transition-speed: 0.3s;
@@ -923,7 +923,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1100px; /* Increased width for the wizard */
+    max-width: 1200px; /* Further increased width for the wizard */
     margin: 0 auto; /* Center the wizard */
     background: var(--bg-dark);
     border-radius: 12px;
