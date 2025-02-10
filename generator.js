@@ -119,67 +119,61 @@ document.addEventListener('DOMContentLoaded', () => {
       let markdown = `<h1 align="center">Hi 👋, I'm ${name || '[Your Name]'}</h1>
 
 
-  ${title ? `<h3 align="center">${title}</h3>\n\n\n\n` : ''}
-  ${bio ? `<p align="center">${bio}</p>\n\n\n\n` : ''}
 
-  ${extras.includes('visitors') ? `<p align="left"><img src="https://komarev.com/ghpvc/?username=${githubUsername}&label=Profile%20views&color=0e75b6&style=flat" alt="${githubUsername}" /></p>\n\n\n\n` : ''}
 
-  ${currentWork ? `- 🔭 I'm currently working on **${currentWork}**\n\n` : ''}
-  ${learning ? `- 🌱 I'm currently learning **${learning}**\n\n` : ''}
-  ${collaboration ? `- 👯 I'm looking to collaborate on **${collaboration}**\n\n` : ''}
-  ${funFact ? `- ⚡ Fun fact: **${funFact}**\n\n\n\n` : ''}
+  ${title ? `<h3 align="center">${title}</h3>\n\n\n\n\n` : ''}
+  ${bio ? `<p align="center">${bio}</p>\n\n\n\n\n` : ''}
 
-  <h3 align="left">Connect with me:</h3>\n\n\n
-  <p align="left">\n
-  ${linkedin ? `<a href="https://linkedin.com/in/${linkedin}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="${linkedin}" height="30" width="40" /></a>` : ''}
-  ${twitter ? `<a href="https://twitter.com/${twitter}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="${twitter}" height="30" width="40" /></a>` : ''}
-  ${facebook ? `<a href="https://fb.com/${facebook}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="${facebook}" height="30" width="40" /></a>` : ''}
-  ${instagram ? `<a href="https://instagram.com/${instagram}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="${instagram}" height="30" width="40" /></a>` : ''}
-  ${dev ? `<a href="https://dev.to/${dev}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="${dev}" height="30" width="40" /></a>` : ''}
-  ${medium ? `<a href="https://medium.com/@${medium}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="${medium}" height="30" width="40" /></a>` : ''}
-  ${stackoverflow ? `<a href="https://stackoverflow.com/users/${stackoverflow}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="${stackoverflow}" height="30" width="40" /></a>` : ''}
-  ${codepen ? `<a href="https://codepen.io/${codepen}" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="${codepen}" height="30" width="40" /></a>` : ''}
-  </p>\n\n\n\n\n`;
+  ${extras.includes('visitors') ? `<p align="left"><img src="https://komarev.com/ghpvc/?username=${githubUsername}&label=Profile%20views&color=0e75b6&style=flat" alt="${githubUsername}" /></p>\n\n\n\n\n` : ''}
+
+  ${currentWork ? `- 🔭 I'm currently working on **${currentWork}**\n\n\n` : ''}
+  ${learning ? `- 🌱 I'm currently learning **${learning}**\n\n\n` : ''}
+  ${collaboration ? `- 👯 I'm looking to collaborate on **${collaboration}**\n\n\n` : ''}
+  ${funFact ? `- ⚡ Fun fact: **${funFact}**\n\n\n\n\n` : ''}
+
+  <h3 align="left">Connect with me:</h3>\n\n\n\n\n\n\n\n\n\n
+  <p align="left">\n${linkedin ? `<a href="https://linkedin.com/in/${linkedin}" target="blank"><img align="center" src="src/images/icons/Social/linked-in-alt.svg" alt="${linkedin}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${twitter ? `<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="src/images/icons/Social/twitter.svg" alt="${twitter}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${facebook ? `<a href="https://fb.com/${facebook}" target="blank"><img align="center" src="src/images/icons/Social/facebook.svg" alt="${facebook}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${instagram ? `<a href="https://instagram.com/${instagram}" target="blank"><img align="center" src="src/images/icons/Social/instagram.svg" alt="${instagram}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${dev ? `<a href="https://dev.to/${dev}" target="blank"><img align="center" src="src/images/icons/Social/devto.svg" alt="${dev}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${medium ? `<a href="https://medium.com/@${medium}" target="blank"><img align="center" src="src/images/icons/Social/medium.svg" alt="${medium}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${stackoverflow ? `<a href="https://stackoverflow.com/users/${stackoverflow}" target="blank"><img align="center" src="src/images/icons/Social/stack-overflow.svg" alt="${stackoverflow}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${codepen ? `<a href="https://codepen.io/${codepen}" target="blank"><img align="center" src="src/images/icons/Social/codepen.svg" alt="${codepen}" height="30" width="40" /></a>` : ''}
+  </p>\n\n\n\n\n\n\n\n\n\n\n\n`;
 
       // Add Skills Section with Categories
       if (programmingLanguages.length > 0 || frontendSkills.length > 0 || backendSkills.length > 0 ||
           databaseSkills.length > 0 || devopsSkills.length > 0 || mobileSkills.length > 0 || otherSkills.length > 0) {
 
-        markdown += `<h3 align="left">Languages and Tools:</h3>\n\n\n\n`;
+        markdown += `<h3 align="left">Languages and Tools:</h3>\n\n\n\n\n\n\n\n\n\n`;
 
         // Programming Languages
         if (programmingLanguages.length > 0) {
-          markdown += `<h4 align="left">Programming Languages</h4>\n\n<p align="left">\n${generateTechStackIcons(programmingLanguages)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Programming Languages</h4>\n\n\n<p align="left">\n${generateTechStackIcons(programmingLanguages)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // Frontend Development
         if (frontendSkills.length > 0) {
-          markdown += `<h4 align="left">Frontend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(frontendSkills)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Frontend Development</h4>\n\n\n<p align="left">\n${generateTechStackIcons(frontendSkills)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // Backend Development
         if (backendSkills.length > 0) {
-          markdown += `<h4 align="left">Backend Development</h4>\n\n<p align="left">\n${generateTechStackIcons(backendSkills)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Backend Development</h4>\n\n\n<p align="left">\n${generateTechStackIcons(backendSkills)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // Database
         if (databaseSkills.length > 0) {
-          markdown += `<h4 align="left">Database</h4>\n\n<p align="left">\n${generateTechStackIcons(databaseSkills)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Database</h4>\n\n\n<p align="left">\n${generateTechStackIcons(databaseSkills)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // DevOps
         if (devopsSkills.length > 0) {
-          markdown += `<h4 align="left">DevOps</h4>\n\n<p align="left">\n${generateTechStackIcons(devopsSkills)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">DevOps</h4>\n\n\n<p align="left">\n${generateTechStackIcons(devopsSkills)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // Mobile App Development
         if (mobileSkills.length > 0) {
-          markdown += `<h4 align="left">Mobile App Development</h4>\n\n<p align="left">\n${generateTechStackIcons(mobileSkills)}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Mobile App Development</h4>\n\n\n<p align="left">\n${generateTechStackIcons(mobileSkills)}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
 
         // Other Skills
         if (otherSkills.length > 0) {
-          markdown += `<h4 align="left">Other</h4>\n\n<p align="left">\n${generateTechStackIcons(otherSkills.map(skill => skill.toLowerCase()))}\n</p>\n\n\n\n`;
+          markdown += `<h4 align="left">Other</h4>\n\n\n<p align="left">\n${generateTechStackIcons(otherSkills.map(skill => skill.toLowerCase()))}\n</p>\n\n\n\n\n\n\n\n\n\n`;
         }
       }
 
@@ -189,59 +183,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add GitHub Stats Section Header
       if (selectedStats.length > 0) {
-        markdown += `\n<h3 align="left">GitHub Stats:</h3>\n\n\n\n`;
+        markdown += `\n\n\n\n\n\n\n\n<h3 align="left">GitHub Stats:</h3>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add GitHub Stats
       if (selectedStats.includes('stats')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&locale=en&theme=${theme}${statsOptionsStr}" alt="${githubUsername}" />\n</p>\n\n\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&locale=en&theme=${theme}${statsOptionsStr}" alt="${githubUsername}" />\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add Most Used Languages
       if (selectedStats.includes('languages')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=${githubUsername}&show_icons=true&locale=en&layout=compact&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=${githubUsername}&show_icons=true&locale=en&layout=compact&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add GitHub Streak Stats
       if (selectedStats.includes('streak')) {
-        markdown += `<p>\n<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n`;
+        markdown += `<p>\n<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add GitHub Trophies
       if (selectedStats.includes('trophies')) {
-        markdown += `<p align="left">\n<a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" /></a>\n</p>\n\n\n\n`;
+        markdown += `<p align="left">\n<a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" /></a>\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add Spotify Now Playing
       if (extras.includes('spotify')) {
-        markdown += `\n<h3 align="left">Currently Playing:</h3>\n\n\n\n<p align="center">\n<img src="https://spotify-github-profile.vercel.app/api/view?uid=${githubUsername}&cover_image=true&theme=default" alt="spotify"/>\n</p>\n\n\n\n`;
+        markdown += `\n\n\n\n\n\n\n\n<h3 align="left">Currently Playing:</h3>\n\n\n\n\n\n\n\n\n\n<p align="center">\n<img src="https://spotify-github-profile.vercel.app/api/view?uid=${githubUsername}&cover_image=true&theme=default" alt="spotify"/>\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add GitHub Activity Graph
       if (extras.includes('activity_graph')) {
-        markdown += `\n<h3 align="left">Activity Graph:</h3>\n\n\n\n<p>\n<img align="center" src="https://activity-graph.herokuapp.com/graph?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n`;
+        markdown += `\n\n\n\n\n\n\n\n<h3 align="left">Activity Graph:</h3>\n\n\n\n\n\n\n\n\n\n<p>\n<img align="center" src="https://activity-graph.herokuapp.com/graph?username=${githubUsername}&theme=${theme}" alt="${githubUsername}" />\n</p>\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add Latest Blog Posts
       if (extras.includes('blog_posts')) {
-        markdown += `\n<h3 align="left">Latest Blog Posts:</h3>\n\n\n\n<!-- BLOG-POST-LIST:START -->\n<!-- BLOG-POST-LIST:END -->\n\n\n\n`;
+        markdown += `\n\n\n\n\n\n\n\n<h3 align="left">Latest Blog Posts:</h3>\n\n\n\n\n\n\n\n\n\n<!-- BLOG-POST-LIST:START -->\n<!-- BLOG-POST-LIST:END -->\n\n\n\n\n\n\n\n\n\n`;
       }
 
       // Add Support Links
       if (supportOptions.length > 0) {
-        markdown += `\n<h3 align="left">Support:</h3>\n\n\n\n`;
+        markdown += `\n\n\n\n\n\n\n\n<h3 align="left">Support:</h3>\n\n\n\n\n\n\n\n\n\n`;
 
         if (supportOptions.includes('buymeacoffee')) {
-          markdown += `<p>\n<a href="https://www.buymeacoffee.com/${buymeacoffeeUsername || githubUsername}">\n<img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymeacoffeeUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n`;
+          markdown += `<p>\n<a href="https://www.buymeacoffee.com/${buymeacoffeeUsername || githubUsername}">\n<img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymeacoffeeUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n\n\n\n\n\n`;
         }
 
         if (supportOptions.includes('kofi')) {
-          markdown += `<p>\n<a href="https://ko-fi.com/${kofiUsername || githubUsername}">\n<img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="${kofiUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n`;
+          markdown += `<p>\n<a href="https://ko-fi.com/${kofiUsername || githubUsername}">\n<img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="${kofiUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n\n\n\n\n\n`;
         }
 
         if (supportOptions.includes('paypal')) {
-          markdown += `<p>\n<a href="https://paypal.me/${paypalUsername || githubUsername}">\n<img align="left" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="50" width="210" alt="${paypalUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n`;
+          markdown += `<p>\n<a href="https://paypal.me/${paypalUsername || githubUsername}">\n<img align="left" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="50" width="210" alt="${paypalUsername || githubUsername}" />\n</a>\n</p>\n\n<br><br>\n\n\n\n\n\n\n\n`;
         }
+      }
+
+      // Apply styling improvements
+      markdown = markdown.replace(
+        /<h4 align="left">(.*?)<\/h4>/g,
+        '<h4 align="left" style="margin-top: 20px; margin-bottom: 5px;">$1</h4>'
+      );
+
+      markdown = markdown.replace(
+        /<p align="left">/g,
+        '<p align="left" style="margin-bottom: 20px;">'
+      );
+
+      markdown = markdown.replace(
+        /<h3 align="left">(.*?)<\/h3>/g,
+        '<hr style="width: 80%; margin: 30px auto;">\n<h3 align="left" style="margin-bottom: 10px;">$1</h3>'
+      );
+
+      // Fix the first h3 to not have an hr before it
+      const firstH3Index = markdown.indexOf('<hr style="width: 80%; margin: 30px auto;">\n<h3');
+      if (firstH3Index !== -1) {
+        markdown = markdown.substring(0, firstH3Index) +
+                  '<h3 align="left" style="margin-bottom: 10px;">' +
+                  markdown.substring(firstH3Index + '<hr style="width: 80%; margin: 30px auto;">\n<h3 align="left" style="margin-bottom: 10px;">'.length);
       }
 
       return markdown;
@@ -250,61 +268,61 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateTechStackIcons(technologies) {
       const techIcons = {
         // Programming Languages
-        javascript: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
-        typescript: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
-        python: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
-        java: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-        c: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
-        cpp: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
-        csharp: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg',
-        php: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg',
-        ruby: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg',
-        swift: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg',
-        go: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg',
-        rust: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg',
+        javascript: 'src/images/icons/devicons/javascript/javascript-original.svg',
+        typescript: 'src/images/icons/devicons/typescript/typescript-original.svg',
+        python: 'src/images/icons/devicons/python/python-original.svg',
+        java: 'src/images/icons/devicons/java/java-original.svg',
+        c: 'src/images/icons/devicons/c/c-original.svg',
+        cpp: 'src/images/icons/devicons/cplusplus/cplusplus-original.svg',
+        csharp: 'src/images/icons/devicons/csharp/csharp-original.svg',
+        php: 'src/images/icons/devicons/php/php-original.svg',
+        ruby: 'src/images/icons/devicons/ruby/ruby-original.svg',
+        swift: 'src/images/icons/devicons/swift/swift-original.svg',
+        go: 'src/images/icons/devicons/go/go-original.svg',
+        rust: 'src/images/icons/devicons/rust/rust-plain.svg',
 
         // Frontend
-        html5: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg',
-        css3: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg',
-        react: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
-        angular: 'https://angular.io/assets/images/logos/angular/angular.svg',
-        vue: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
-        bootstrap: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg',
-        tailwind: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg',
-        sass: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg',
+        html5: 'src/images/icons/devicons/html5/html5-original-wordmark.svg',
+        css3: 'src/images/icons/devicons/css3/css3-original-wordmark.svg',
+        react: 'src/images/icons/devicons/react/react-original-wordmark.svg',
+        angular: 'src/images/icons/devicons/angular/angular.svg',
+        vue: 'src/images/icons/devicons/vuejs/vuejs-original-wordmark.svg',
+        bootstrap: 'src/images/icons/devicons/bootstrap/bootstrap-plain-wordmark.svg',
+        tailwind: 'src/images/icons/devicons/tailwindcss/tailwindcss-icon.svg',
+        sass: 'src/images/icons/devicons/sass/sass-original.svg',
 
         // Backend
-        nodejs: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg',
-        express: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg',
-        django: 'https://cdn.worldvectorlogo.com/logos/django.svg',
-        spring: 'https://www.vectorlogo.zone/logos/springio/springio-icon.svg',
-        flask: 'https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg',
-        laravel: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg',
-        graphql: 'https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg',
+        nodejs: 'src/images/icons/devicons/nodejs/nodejs-original-wordmark.svg',
+        express: 'src/images/icons/devicons/express/express-original-wordmark.svg',
+        django: 'src/images/icons/devicons/django/django.svg',
+        spring: 'src/images/icons/devicons/springio/springio-icon.svg',
+        flask: 'src/images/icons/devicons/pocoo_flask/pocoo_flask-icon.svg',
+        laravel: 'src/images/icons/devicons/laravel/laravel-plain-wordmark.svg',
+        graphql: 'src/images/icons/devicons/graphql/graphql-icon.svg',
 
         // Database
-        mongodb: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg',
-        mysql: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg',
-        postgresql: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg',
-        redis: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg',
-        sqlite: 'https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg',
-        oracle: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg',
+        mongodb: 'src/images/icons/devicons/mongodb/mongodb-original-wordmark.svg',
+        mysql: 'src/images/icons/devicons/mysql/mysql-original-wordmark.svg',
+        postgresql: 'src/images/icons/devicons/postgresql/postgresql-original-wordmark.svg',
+        redis: 'src/images/icons/devicons/redis/redis-original-wordmark.svg',
+        sqlite: 'src/images/icons/devicons/sqlite/sqlite-icon.svg',
+        oracle: 'src/images/icons/devicons/oracle/oracle-original.svg',
 
         // DevOps
-        aws: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-        docker: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
-        kubernetes: 'https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg',
-        gcp: 'https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg',
-        azure: 'https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg',
-        jenkins: 'https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg',
-        git: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
+        aws: 'src/images/icons/devicons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        docker: 'src/images/icons/devicons/docker/docker-original-wordmark.svg',
+        kubernetes: 'src/images/icons/devicons/kubernetes/kubernetes-icon.svg',
+        gcp: 'src/images/icons/devicons/google_cloud/google_cloud-icon.svg',
+        azure: 'src/images/icons/devicons/microsoft_azure/microsoft_azure-icon.svg',
+        jenkins: 'src/images/icons/devicons/jenkins/jenkins-icon.svg',
+        git: 'src/images/icons/devicons/git-scm/git-scm-icon.svg',
 
         // Mobile
-        android: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg',
-        ios: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg',
-        flutter: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg',
-        reactnative: 'https://reactnative.dev/img/header_logo.svg',
-        kotlin: 'https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg',
+        android: 'src/images/icons/devicons/android/android-original-wordmark.svg',
+        ios: 'src/images/icons/devicons/apple/apple-original.svg',
+        flutter: 'src/images/icons/devicons/flutterio/flutterio-icon.svg',
+        reactnative: 'src/images/icons/devicons/reactnative/header_logo.svg',
+        kotlin: 'src/images/icons/devicons/kotlinlang/kotlinlang-icon.svg',
       };
 
       return technologies
