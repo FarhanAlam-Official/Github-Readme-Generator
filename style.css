@@ -985,6 +985,12 @@
     animation: glow-green 1.5s infinite alternate;
   }
 
+  .step.completed .step-number i {
+    color: #ffffff; /* Pure white for better visibility */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Add slight shadow for contrast */
+    font-weight: bold;
+  }
+
   @keyframes glow-green {
     from {
       box-shadow: 0 0 5px var(--success-color);
@@ -1114,11 +1120,19 @@
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+    border: 1px solid transparent; /* Add transparent border to prevent layout shift on hover */
   }
 
   .checkbox-label:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08); /* Slightly more visible but still subtle */
     transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+  }
+
+  html:not(.dark-theme) .checkbox-label:hover {
+    background: rgba(3, 102, 214, 0.05); /* Light blue tint in light mode */
+    border: 1px solid rgba(3, 102, 214, 0.1);
   }
 
   .checkbox-label input[type="checkbox"] {
@@ -1126,14 +1140,27 @@
     transition: all var(--transition-speed);
   }
 
+  /* Style for the label text when checkbox is checked */
   .checkbox-label input[type="checkbox"]:checked + span {
     color: var(--primary-color);
     font-weight: 600;
+    text-shadow: 0 0 1px rgba(3, 102, 214, 0.2); /* Subtle glow */
   }
 
-  /* Make all checked skills blue */
-  .checkbox-label input[type="checkbox"]:checked ~ * {
+  /* Make all text in the label blue when checked */
+  .checkbox-label.checked {
     color: var(--primary-color);
+  }
+
+  /* Make all text in the label white when unchecked */
+  .checkbox-label {
+    color: var(--text-white);
+  }
+
+  /* Style for the entire label when checkbox is checked */
+  .checkbox-label.checked {
+    background-color: rgba(3, 102, 214, 0.05);
+    border-color: rgba(3, 102, 214, 0.1);
   }
 
   .checkbox-label::after {
