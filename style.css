@@ -1147,9 +1147,10 @@
     text-shadow: 0 0 1px rgba(3, 102, 214, 0.2); /* Subtle glow */
   }
 
-  /* Make all text in the label blue when checked */
+  /* Make all text in the label blue and bold when checked */
   .checkbox-label.checked {
     color: var(--primary-color);
+    font-weight: bold;
   }
 
   /* Make all text in the label white when unchecked */
@@ -1159,8 +1160,10 @@
 
   /* Style for the entire label when checkbox is checked */
   .checkbox-label.checked {
-    background-color: rgba(3, 102, 214, 0.05);
-    border-color: rgba(3, 102, 214, 0.1);
+    background-color: rgba(3, 102, 214, 0.08);
+    border-color: rgba(3, 102, 214, 0.15);
+    box-shadow: 0 2px 5px rgba(3, 102, 214, 0.1);
+    transform: translateY(-1px);
   }
 
   .checkbox-label::after {
