@@ -745,6 +745,94 @@
     font-size: 1.2rem;
   }
 
+  /* Rocket animation */
+  .rocket-icon {
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+    position: relative;
+  }
+
+  .rocket-icon.rocket-animated {
+    animation: rocket-launch 1s ease-in-out;
+  }
+
+  .rocket-icon.rocket-animated::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 15px 5px;
+    border-color: transparent transparent rgba(255, 165, 0, 0.7) transparent;
+    filter: blur(2px);
+    animation: rocket-trail 1s ease-in-out;
+  }
+
+  @keyframes rocket-trail {
+    0% {
+      opacity: 0;
+      height: 0;
+    }
+    20% {
+      opacity: 0.7;
+      height: 8px;
+    }
+    60% {
+      opacity: 1;
+      height: 20px;
+    }
+    80% {
+      opacity: 0.7;
+      height: 15px;
+    }
+    100% {
+      opacity: 0;
+      height: 0;
+    }
+  }
+
+  @keyframes rocket-launch {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    20% {
+      transform: translateY(-5px) rotate(-5deg);
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-15px) rotate(5deg);
+      opacity: 1;
+    }
+    60% {
+      transform: translateY(-25px) rotate(-5deg);
+      opacity: 0.8;
+    }
+    80% {
+      transform: translateY(-40px) rotate(0deg);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(-60px) rotate(0deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glow-button {
+    0% {
+      box-shadow: 0 0 5px rgba(3, 102, 214, 0.3), 0 0 10px rgba(3, 102, 214, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(3, 102, 214, 0.5), 0 0 20px rgba(110, 64, 201, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(3, 102, 214, 0.3), 0 0 10px rgba(3, 102, 214, 0.2);
+    }
+  }
+
   .secondary-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -759,12 +847,36 @@
     transition: all var(--transition-speed);
     text-decoration: none;
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
   }
 
   .secondary-button:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
+    animation: glow-button 2s infinite;
+    color: white;
+    text-shadow: 0 0 5px rgba(3, 102, 214, 0.7);
+  }
+
+  .secondary-button:hover i {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(3, 102, 214, 0.8);
+  }
+
+  .secondary-button:hover::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    border-radius: 32px;
+    z-index: -1;
+    opacity: 0.3;
+    animation: border-animation 3s linear infinite;
   }
 
   .hero-features {
