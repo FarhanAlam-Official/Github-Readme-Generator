@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ${funFact ? `- ⚡ Fun fact: **${funFact}**\n\n\n\n\n` : ''}
 
   <h3 align="left">Connect with me:</h3>\n\n\n\n\n\n\n\n\n\n
-  <p align="left">\n${linkedin ? `<a href="https://linkedin.com/in/${linkedin}" target="blank"><img align="center" src="src/images/icons/Social/linked-in-alt.svg" alt="${linkedin}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${twitter ? `<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="src/images/icons/Social/twitter.svg" alt="${twitter}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${facebook ? `<a href="https://fb.com/${facebook}" target="blank"><img align="center" src="src/images/icons/Social/facebook.svg" alt="${facebook}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${instagram ? `<a href="https://instagram.com/${instagram}" target="blank"><img align="center" src="src/images/icons/Social/instagram.svg" alt="${instagram}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${dev ? `<a href="https://dev.to/${dev}" target="blank"><img align="center" src="src/images/icons/Social/devto.svg" alt="${dev}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${medium ? `<a href="https://medium.com/@${medium}" target="blank"><img align="center" src="src/images/icons/Social/medium.svg" alt="${medium}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${stackoverflow ? `<a href="https://stackoverflow.com/users/${stackoverflow}" target="blank"><img align="center" src="src/images/icons/Social/stack-overflow.svg" alt="${stackoverflow}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${codepen ? `<a href="https://codepen.io/${codepen}" target="blank"><img align="center" src="src/images/icons/Social/codepen.svg" alt="${codepen}" height="30" width="40" /></a>` : ''}
+  <p align="left">\n${linkedin ? `<a href="https://linkedin.com/in/${linkedin}" target="blank"><img align="center" src="../images/icons/Social/linked-in-alt.svg" alt="${linkedin}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${twitter ? `<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="../images/icons/Social/twitter.svg" alt="${twitter}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${facebook ? `<a href="https://fb.com/${facebook}" target="blank"><img align="center" src="../images/icons/Social/facebook.svg" alt="${facebook}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${instagram ? `<a href="https://instagram.com/${instagram}" target="blank"><img align="center" src="../images/icons/Social/instagram.svg" alt="${instagram}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${dev ? `<a href="https://dev.to/${dev}" target="blank"><img align="center" src="../images/icons/Social/devto.svg" alt="${dev}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${medium ? `<a href="https://medium.com/@${medium}" target="blank"><img align="center" src="../images/icons/Social/medium.svg" alt="${medium}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${stackoverflow ? `<a href="https://stackoverflow.com/users/${stackoverflow}" target="blank"><img align="center" src="../images/icons/Social/stack-overflow.svg" alt="${stackoverflow}" height="30" width="40" /></a>&nbsp;&nbsp;` : ''}${codepen ? `<a href="https://codepen.io/${codepen}" target="blank"><img align="center" src="../images/icons/Social/codepen.svg" alt="${codepen}" height="30" width="40" /></a>` : ''}
   </p>\n\n\n\n\n\n\n\n\n\n\n\n`;
 
       // Add Skills Section with Categories
@@ -268,61 +268,61 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateTechStackIcons(technologies) {
       const techIcons = {
         // Programming Languages
-        javascript: 'images/icons/ProgrammingLanguages/javascript.svg',
-        typescript: 'images/icons/ProgrammingLanguages/typescript.svg',
-        python: 'images/icons/ProgrammingLanguages/python.svg',
-        java: 'images/icons/ProgrammingLanguages/java.svg',
-        c: 'images/icons/ProgrammingLanguages/c.svg',
-        cpp: 'images/icons/ProgrammingLanguages/cpp.svg',
-        csharp: 'images/icons/ProgrammingLanguages/csharp.svg',
-        php: 'images/icons/ProgrammingLanguages/php.svg',
-        ruby: 'images/icons/ProgrammingLanguages/ruby.svg',
-        swift: 'images/icons/ProgrammingLanguages/swift.svg',
-        go: 'images/icons/ProgrammingLanguages/go.svg',
-        rust: 'images/icons/ProgrammingLanguages/rust.svg',
+        javascript: '../images/icons/ProgrammingLanguages/javascript.svg',
+        typescript: '../images/icons/ProgrammingLanguages/typescript.svg',
+        python: '../images/icons/ProgrammingLanguages/python.svg',
+        java: '../images/icons/ProgrammingLanguages/java.svg',
+        c: '../images/icons/ProgrammingLanguages/c.svg',
+        cpp: '../images/icons/ProgrammingLanguages/cpp.svg',
+        csharp: '../images/icons/ProgrammingLanguages/csharp.svg',
+        php: '../images/icons/ProgrammingLanguages/php.svg',
+        ruby: '../images/icons/ProgrammingLanguages/ruby.svg',
+        swift: '../images/icons/ProgrammingLanguages/swift.svg',
+        go: '../images/icons/ProgrammingLanguages/go.svg',
+        rust: '../images/icons/ProgrammingLanguages/rust.svg',
 
         // Frontend
-        html5: 'images/icons/FrontendDevelopment/html.svg',
-        css3: 'images/icons/FrontendDevelopment/css.svg',
-        react: 'images/icons/FrontendDevelopment/reactjs.svg',
-        angular: 'images/icons/FrontendDevelopment/angularjs.svg',
-        vue: 'images/icons/FrontendDevelopment/vuejs.svg',
-        bootstrap: 'images/icons/FrontendDevelopment/bootstrap.svg',
-        tailwind: 'images/icons/FrontendDevelopment/tailwind.svg',
-        sass: 'images/icons/FrontendDevelopment/sass.svg',
+        html5: '../images/icons/FrontendDevelopment/html.svg',
+        css3: '../images/icons/FrontendDevelopment/css.svg',
+        react: '../images/icons/FrontendDevelopment/reactjs.svg',
+        angular: '../images/icons/FrontendDevelopment/angularjs.svg',
+        vue: '../images/icons/FrontendDevelopment/vuejs.svg',
+        bootstrap: '../images/icons/FrontendDevelopment/bootstrap.svg',
+        tailwind: '../images/icons/FrontendDevelopment/tailwind.svg',
+        sass: '../images/icons/FrontendDevelopment/sass.svg',
 
         // Backend
-        nodejs: 'images/icons/BackendDevelopment/nodejs.svg',
-        express: 'images/icons/BackendDevelopment/express.svg',
-        django: 'images/icons/Framework/django.svg',
-        spring: 'images/icons/BackendDevelopment/spring.svg',
-        flask: 'images/icons/Framework/flask.svg',
-        laravel: 'images/icons/Framework/laravel.svg',
-        graphql: 'images/icons/BackendDevelopment/graphql.svg',
+        nodejs: '../images/icons/BackendDevelopment/nodejs.svg',
+        express: '../images/icons/BackendDevelopment/express.svg',
+        django: '../images/icons/Framework/django.svg',
+        spring: '../images/icons/BackendDevelopment/spring.svg',
+        flask: '../images/icons/Framework/flask.svg',
+        laravel: '../images/icons/Framework/laravel.svg',
+        graphql: '../images/icons/BackendDevelopment/graphql.svg',
 
         // Database
-        mongodb: 'images/icons/Database/mongodb.svg',
-        mysql: 'images/icons/Database/mysql.svg',
-        postgresql: 'images/icons/Database/postgresql.svg',
-        redis: 'images/icons/Database/redis.svg',
-        sqlite: 'images/icons/Database/sqlite.svg',
-        oracle: 'images/icons/Database/oracle.svg',
+        mongodb: '../images/icons/Database/mongodb.svg',
+        mysql: '../images/icons/Database/mysql.svg',
+        postgresql: '../images/icons/Database/postgresql.svg',
+        redis: '../images/icons/Database/redis.svg',
+        sqlite: '../images/icons/Database/sqlite.svg',
+        oracle: '../images/icons/Database/oracle.svg',
 
         // DevOps
-        aws: 'images/icons/Devops/aws.svg',
-        docker: 'images/icons/Devops/docker.svg',
-        kubernetes: 'images/icons/Devops/kubernetes.svg',
-        gcp: 'images/icons/Devops/gcp.svg',
-        azure: 'images/icons/Devops/azure.svg',
-        jenkins: 'images/icons/Devops/jenkins.svg',
-        git: 'images/icons/Other/git.svg',
+        aws: '../images/icons/Devops/aws.svg',
+        docker: '../images/icons/Devops/docker.svg',
+        kubernetes: '../images/icons/Devops/kubernetes.svg',
+        gcp: '../images/icons/Devops/gcp.svg',
+        azure: '../images/icons/Devops/azure.svg',
+        jenkins: '../images/icons/Devops/jenkins.svg',
+        git: '../images/icons/Other/git.svg',
 
         // Mobile
-        android: 'images/icons/MobileAppDevelopment/android.svg',
+        android: '../images/icons/MobileAppDevelopment/android.svg',
         ios: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg',
-        flutter: 'images/icons/MobileAppDevelopment/flutter.svg',
-        reactnative: 'images/icons/MobileAppDevelopment/reactnative.svg',
-        kotlin: 'images/icons/MobileAppDevelopment/kotlin.svg',
+        flutter: '../images/icons/MobileAppDevelopment/flutter.svg',
+        reactnative: '../images/icons/MobileAppDevelopment/reactnative.svg',
+        kotlin: '../images/icons/MobileAppDevelopment/kotlin.svg',
       };
 
       return technologies
