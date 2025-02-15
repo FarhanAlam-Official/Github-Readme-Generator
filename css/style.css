@@ -147,6 +147,16 @@
     animation: logo-pulse 2s ease-in-out infinite alternate;
   }
 
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(3, 102, 214, 0.5));
+    animation: logo-pulse 2s ease-in-out infinite alternate;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
   @keyframes logo-pulse {
     0% {
       transform: scale(1);
@@ -2210,6 +2220,15 @@
     color: var(--primary-color);
     font-size: 1.5rem;
     animation: logo-icon-spin 10s linear infinite;
+  }
+
+  .footer-logo-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    animation: logo-icon-spin 10s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
   }
 
   @keyframes logo-icon-spin {
