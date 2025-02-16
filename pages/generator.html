@@ -387,14 +387,6 @@
       <div class="preview" data-step-content="6" style="display: none;">
         <div class="preview-header">
           <h2>Preview Your GitHub Profile README</h2>
-          <div class="preview-actions">
-            <button id="copyBtn" class="action-button">
-              <i class="ri-file-copy-line"></i> Copy Markdown
-            </button>
-            <button id="downloadBtn" class="action-button download-button">
-              <i class="ri-download-line"></i> Download README
-            </button>
-          </div>
         </div>
         <div id="previewContent" class="preview-content markdown-body"></div>
       </div>
@@ -404,12 +396,19 @@
   <!-- Final Success Modal -->
   <div id="successModal" class="modal" style="display: none;">
     <div class="modal-content animate__animated animate__zoomIn">
+      <div class="modal-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
       <div class="modal-header">
-        <h2><i class="ri-check-line"></i> README Generated Successfully!</h2>
+        <div class="success-icon">
+          <i class="ri-check-line"></i>
+        </div>
+        <h2>README Generated Successfully!</h2>
         <span class="close-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <p>Your GitHub Profile README has been generated successfully. What would you like to do next?</p>
+        <p class="success-message-text">Your GitHub Profile README has been generated successfully. What would you like to do next?</p>
         <div class="modal-actions">
           <button id="copyMarkdownBtn" class="modal-button">
             <i class="ri-file-copy-line"></i> Copy Markdown
@@ -419,7 +418,10 @@
           </button>
         </div>
         <div class="modal-tip">
-          <p><i class="ri-information-line"></i> <strong>Tip:</strong> Create a repository with the same name as your GitHub username to display this README on your profile.</p>
+          <div class="tip-icon"><i class="ri-information-line"></i></div>
+          <div class="tip-content">
+            <p><strong>Tip:</strong> Create a repository with the same name as your GitHub username to display this README on your profile.</p>
+          </div>
         </div>
       </div>
     </div>
