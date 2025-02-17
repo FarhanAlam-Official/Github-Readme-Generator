@@ -9,10 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generator page specific elements
     const form = document.getElementById('readmeForm');
     const previewContent = document.getElementById('previewContent');
-    const downloadBtn = document.getElementById('downloadBtn');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const copyBtn = document.getElementById('copyBtn');
     const successModal = document.getElementById('successModal');
     const closeModal = document.querySelector('.close-modal');
     const copyMarkdownBtn = document.getElementById('copyMarkdownBtn');
@@ -509,8 +507,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add event listeners
     form.addEventListener('input', updatePreview);
     form.addEventListener('change', updatePreview);
-    downloadBtn.addEventListener('click', downloadReadme);
-    copyBtn.addEventListener('click', copyMarkdown);
     copyMarkdownBtn.addEventListener('click', () => {
       copyMarkdown();
       hideSuccessModal();
