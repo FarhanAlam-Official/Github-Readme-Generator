@@ -318,7 +318,7 @@
 
     <div class="cta-section">
       <h2>Create your own GitHub Profile README now!</h2>
-      <a href="../index.html" class="cta-button">Get Started</a>
+      <a href="generator.html" class="cta-button">Get Started</a>
     </div>
   </main>
 
@@ -403,9 +403,9 @@
 
       useButtons.forEach(button => {
         button.addEventListener('click', () => {
-          // Redirect to home page with template parameter
+          // Redirect to generator page with template parameter
           const exampleType = button.getAttribute('data-example');
-          window.location.href = `index.html?template=${exampleType}`;
+          window.location.href = `generator.html?template=${exampleType}`;
         });
       });
     });
