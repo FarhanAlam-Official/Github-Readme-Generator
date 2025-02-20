@@ -349,8 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update preview visibility based on current step
       if (step === 6) {
-        // We're on the preview step, make sure preview is updated
+        // We're on the preview step, make sure preview is updated and visible
         updatePreview();
+        document.body.classList.add('step-6');
+      } else {
+        // Not on preview step, remove the class
+        document.body.classList.remove('step-6');
       }
 
       // Update steps UI
@@ -450,10 +454,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // If we're on the preview step (step 6), make sure the preview is visible
       if (currentStep === 6) {
-        const previewSection = document.querySelector('[data-step-content="6"]');
-        if (previewSection) {
-          previewSection.style.display = 'block';
-        }
+        document.body.classList.add('step-6');
+      } else {
+        document.body.classList.remove('step-6');
       }
     }
 
@@ -510,6 +513,15 @@ document.addEventListener('DOMContentLoaded', () => {
     copyMarkdownBtn.addEventListener('click', () => {
       copyMarkdown();
       hideSuccessModal();
+    });
+
+    // Handle window resize for mobile preview visibility
+    window.addEventListener('resize', () => {
+      if (currentStep === 6) {
+        document.body.classList.add('step-6');
+      } else {
+        document.body.classList.remove('step-6');
+      }
     });
     downloadReadmeBtn.addEventListener('click', () => {
       downloadReadme();
