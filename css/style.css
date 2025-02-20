@@ -357,6 +357,7 @@
     border-radius: 50%;
     position: absolute;
     left: 2px;
+    top: 1px;
     transition: all var(--transition-speed);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
@@ -371,6 +372,7 @@
 
   html.dark-theme .toggle-thumb {
     left: calc(100% - 18px);
+    top: 1px;
     background: var(--secondary-color);
   }
 
@@ -3302,20 +3304,23 @@
       padding-top: 1.5rem;
       text-align: center;
       width: 100%;
+      margin: 0 auto;
     }
 
     .hero-content h1 {
       font-size: 2rem;
       line-height: 1.3;
-      margin-bottom: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin-bottom: 0.3rem;
+      text-align: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-content h1 .highlight {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      display: inline-block;
     }
 
     .hero-content p {
@@ -3614,7 +3619,25 @@
 
     /* Improved small screen experience */
     .hero-content h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
+    }
+
+    .typing {
+      font-size: 2.3rem;
+      font-weight: 600;
+    }
+
+    .typing-container {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .typing-text {
+      font-size: 2.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
     .hero-content p {
