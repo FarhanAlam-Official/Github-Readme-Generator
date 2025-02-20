@@ -995,6 +995,8 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
+    min-height: 450px;
+    height: auto;
   }
 
   html.dark-theme .preview-window {
@@ -1060,18 +1062,33 @@
 
   .preview-content {
     padding: 1.5rem;
-    max-height: 500px;
+    max-height: 400px;
+    min-height: auto;
+    height: auto;
     overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    word-break: break-all;
   }
 
   .preview-markdown {
     font-family: 'Courier New', monospace;
     color: var(--text-white);
-    line-height: 1.6;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    word-break: break-all;
   }
 
   .preview-line {
     margin-bottom: 0.75rem;
+    word-break: break-all;
+    white-space: normal;
+    width: 100%;
   }
 
   .md-h1 {
@@ -3266,8 +3283,11 @@
 
     /* Hero section responsive */
     .hero-section {
-      padding: 80px 1rem 2rem;
+      padding: 80px 0.5rem 2rem;
       min-height: auto;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
 
     .hero-content {
@@ -3344,6 +3364,8 @@
       width: 450px;
       margin: 0 auto;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      height: auto;
+      min-height: 450px;
     }
 
     .hero-preview {
@@ -3351,6 +3373,9 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: visible;
     }
 
     .modal-actions {
@@ -3598,8 +3623,17 @@
     }
 
     .preview-window {
-      max-width: 95%;
-      width: 350px;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      min-height: auto;
+      max-height: 450px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transform: scale(0.95);
+      transform-origin: top center;
+      word-break: break-all;
     }
 
     .preview-title {
@@ -3608,6 +3642,15 @@
 
     .preview-content {
       font-size: 0.8rem;
+      max-height: none;
+      height: auto;
+      min-height: auto;
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: auto;
+      word-break: break-all;
+      white-space: normal;
     }
 
     .nav-logo span {
