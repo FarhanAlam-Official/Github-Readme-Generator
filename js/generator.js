@@ -1,4 +1,12 @@
-// Theme functionality moved to theme.js
+/**
+ * GitHub Profile README Generator - Main Script
+ *
+ * This script handles the step-by-step wizard functionality, form validation,
+ * markdown generation, and preview rendering for the README generator.
+ *
+ * @author Farhan Alam
+ * @note Theme functionality moved to theme.js
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Common elements across all pages
@@ -23,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const steps = document.querySelectorAll('.step');
     const progressBar = document.querySelector('.progress');
 
-    // Initialize marked with GitHub flavor
+    /**
+     * Initialize Marked.js with GitHub Flavored Markdown settings
+     * This ensures the preview matches GitHub's rendering style
+     */
     marked.use({
       breaks: true,
       gfm: true
@@ -40,14 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Mobile menu toggle
+    /**
+     * Mobile Navigation Menu Toggle
+     * Shows/hides the mobile navigation menu and changes the icon
+     */
     mobileMenuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       mobileMenuToggle.innerHTML = navLinks.classList.contains('active') ?
         '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>';
     });
 
-    // Close mobile menu when clicking on a link
+    /**
+     * Close mobile menu when clicking on a navigation link
+     * Improves mobile user experience
+     */
     navLinksItems.forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -55,6 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    /**
+     * Generates the complete README markdown based on form data
+     * Includes all sections selected by the user with proper formatting
+     *
+     * @param {FormData} formData - The form data from the wizard
+     * @returns {string} Complete markdown for the README
+     */
     function generateMarkdown(formData) {
       const name = formData.get('name');
       const title = formData.get('title');
@@ -334,7 +358,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .join(' ');
     }
 
-    // Navigation functions
+    /**
+     * Wizard Navigation System
+     * Handles transitions between steps, updates progress bar,
+     * and manages the active state of step indicators
+     *
+     * @param {number} step - The step number to navigate to
+     */
     function goToStep(step) {
       if (step < 1 || step > totalSteps) return;
 
@@ -445,7 +475,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Preview and download functions
+    /**
+     * Updates the README preview with rendered markdown
+     * Uses DOMPurify to sanitize HTML for security
+     * Generates markdown from current form data and renders it
+     */
     function updatePreview() {
       const formData = new FormData(form);
       const markdown = generateMarkdown(formData);
@@ -460,6 +494,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    /**
+     * Gets the current markdown based on form data
+     * Used for copying and downloading the README
+     *
+     * @returns {string} The generated markdown
+     */
     function getMarkdown() {
       const formData = new FormData(form);
       return generateMarkdown(formData);
