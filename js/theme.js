@@ -1,4 +1,11 @@
-// Simple theme toggle functionality
+/**
+ * Theme Toggle Functionality
+ *
+ * This script handles the dark/light theme toggle functionality for the GitHub Profile README Generator.
+ * It saves user preferences to localStorage and applies the theme immediately to prevent flash of wrong theme.
+ *
+ * @author Farhan Alam
+ */
 
 // Apply theme immediately to prevent flash of wrong theme
 const savedTheme = localStorage.getItem('theme');
@@ -10,7 +17,10 @@ if (savedTheme === null || savedTheme === 'dark') {
   document.documentElement.classList.remove('dark-theme');
 }
 
-// Function to update toggle appearance based on current theme
+/**
+ * Updates the theme toggle button appearance based on the current theme
+ * Changes the position of the toggle thumb and updates visual indicators
+ */
 function updateToggleAppearance() {
   const themeToggle = document.querySelector('.theme-toggle');
   if (!themeToggle) return;
@@ -28,7 +38,10 @@ function updateToggleAppearance() {
   }
 }
 
-// Wait for DOM to be fully loaded
+/**
+ * Main initialization - sets up event listeners and initial state
+ * Executes when the DOM is fully loaded
+ */
 document.addEventListener('DOMContentLoaded', function() {
   // Get the theme toggle element
   const themeToggle = document.querySelector('.theme-toggle');

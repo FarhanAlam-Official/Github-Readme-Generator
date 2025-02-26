@@ -1,4 +1,14 @@
+/**
+ * Typing Animation Script
+ *
+ * Creates a typewriter effect that cycles through different adjectives
+ * to describe GitHub profiles created with the generator.
+ *
+ * @author Farhan Alam
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Words to cycle through in the typing animation
   const words = ['Impressive', 'Professional', 'Outstanding', 'Remarkable'];
   let currentIndex = 0;
   let charIndex = 0;
@@ -25,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set initial content
   textSpan.textContent = '\u00A0'; // Non-breaking space
 
+  /**
+   * Main typing animation function
+   * Handles both typing and deleting text with consistent timing
+   */
   function type() {
     const currentWord = words[currentIndex];
     const typingSpeed = 80; // Consistent speed for all operations
