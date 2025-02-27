@@ -1,19 +1,41 @@
+/* ======================================================
+   GitHub Profile README Generator - Main Stylesheet
+   Author: Farhan Alam
+   Description: Styles for the GitHub Profile README Generator
+   ====================================================== */
+
+/* ----------------
+   Color Variables
+   ---------------- */
 :root {
+    /* Primary Colors */
     --primary-color: #0366d6;
     --primary-hover: #0256b4;
     --secondary-color: #6e40c9;
     --secondary-hover: #5a32a3;
+
+    /* Background Colors */
     --bg-dark: #0d1117;
     --bg-darker: #0a0e14;
     --navbar-bg-dark: #161b22; /* New navbar background for dark theme */
+
+    /* Text and Border Colors */
     --text-white: #c9d1d9;
     --border-color: #30363d;
     --input-bg: #161b22;
+
+    /* Status Colors */
     --success-color: #2ecc71; /* More vibrant green */
     --warning-color: #d29922;
     --error-color: #f85149;
+
+    /* Animation Speed */
     --transition-speed: 0.3s;
   }
+
+  /* -----------------
+   Theme Configurations
+   ----------------- */
 
   /* Dark Theme Variables */
   html.dark-theme {
@@ -34,6 +56,10 @@
     --border-color: #e1e4e8;
     --input-bg: #f6f8fa;
   }
+
+  /* -----------------
+   Navbar Theme Overrides
+   ----------------- */
 
   /* Navbar Light Theme Overrides */
   html:not(.dark-theme) .navbar {
@@ -86,6 +112,10 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
+  /* -----------------
+   Base Element Styles
+   ----------------- */
+
   * {
     margin: 0;
     padding: 0;
@@ -102,7 +132,11 @@
     overflow-x: hidden;
   }
 
-  .navbar {
+  /* -----------------
+   Navigation Bar Styling
+   ----------------- */
+
+.navbar {
     padding: 0.5rem 0;
     position: fixed;
     top: 0;
