@@ -1,6 +1,13 @@
 <!DOCTYPE html>
+<!--
+  GitHub Profile README Generator - Wizard Page
+  Author: Farhan Alam
+  Description: Step-by-step wizard interface for creating GitHub profile READMEs
+  with live preview and customization options.
+-->
 <html lang="en">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub Profile README Generator - Create Your Profile | Step-by-Step Wizard</title>
@@ -26,17 +33,22 @@
   <meta property="twitter:description" content="Use our step-by-step wizard to create a professional GitHub profile README. Customize sections, add skills, and generate your markdown file in minutes.">
   <meta property="twitter:image" content="https://github-readme-generator.com/images/og-image.jpg">
 
+  <!-- Favicon and App Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
   <link rel="manifest" href="../images/favicons/site.webmanifest">
   <link rel="shortcut icon" href="../images/favicons/favicon.ico">
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
   <script src="../js/theme.js"></script>
 
   <!-- JSON-LD Structured Data -->
@@ -64,6 +76,7 @@
 </head>
 
 <body>
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-background"></div>
     <div class="nav-content">
@@ -99,7 +112,9 @@
     </div>
   </nav>
 
+  <!-- Main Wizard Container -->
   <main class="container generator-page">
+    <!-- Wizard Steps Navigation -->
     <div class="wizard-container">
       <div class="wizard-steps">
         <div class="step active" data-step="1">
@@ -134,7 +149,9 @@
         </div>
       </div>
 
+      <!-- Form Editor Section -->
       <div class="editor">
+        <!-- README Generation Form -->
         <form id="readmeForm" class="form-container">
           <!-- Step 1: Basic Info Section -->
           <section class="form-section" data-step-content="1">
@@ -428,7 +445,7 @@
         </div>
       </div>
 
-      <!-- Step 6: Preview Section -->
+      <!-- Step 6: Live Preview Section -->
       <div class="preview" data-step-content="6" style="display: none;">
         <div class="preview-header">
           <h2>Preview Your GitHub Profile README</h2>
@@ -438,7 +455,7 @@
     </div>
   </main>
 
-  <!-- Final Success Modal -->
+  <!-- Success Modal Dialog -->
   <div id="successModal" class="modal" style="display: none;">
     <div class="modal-content animate__animated animate__zoomIn">
       <div class="modal-particles">
@@ -472,6 +489,7 @@
     </div>
   </div>
 
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-particles">
       <span></span><span></span><span></span><span></span><span></span>
@@ -504,6 +522,7 @@
     </div>
   </footer>
 
+  <!-- Generator Page Specific JavaScript -->
   <script src="../js/generator.js"></script>
 </body>
 </html>
