@@ -102,10 +102,12 @@
 <hr>
 
 <h2 id="contact">📬 Contact</h2>
-<p>For any questions or collaboration inquiries, feel free to reach out:</p>
+
+<p>For questions, suggestions, or collaboration inquiries:</p>
 <ul>
-    <li><strong>GitHub:</strong> <a href="https://github.com/your-username" target="_blank">your-username</a></li>
-    <li><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+    <li><strong>GitHub :</strong> <a href="https://github.com/FarhanAlam-Official" target="_blank">Farhan Alam</a></li>
+    <li><strong>Email &nbsp; &nbsp;:</strong> <a href="mailto:thefarhanalam01@gmail.com">Farhan Alam</a> 
+        | <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thefarhanalam01@gmail.com" target="_blank">Open in Gmail</a></li>
 </ul>
 
-<p align="center">Made with ❤️ by <a href="https://github.com/your-username">your-username</a></p>
+<p align="center">Made with ❤️ by <a href="https://github.com/FarhanAlam-Official">Farhan Alam</a></p>
